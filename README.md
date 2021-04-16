@@ -10,7 +10,15 @@ Multi-tasking could be achieved in two seemingly similar but different manners:
 
 - **Multi-processing**: We often hear the words "Dual-core", or "Quad-core", ..., whenever we're talking about a CPU. The "Quad-core" for example means that the CPU has 4 physical CPUs inside of it all running at the same time sharing tasks. Multi-processing is the process of optimizing tasks to run simultaneously each on a seperate core. This gives us an advantage in terms of speed(reducing runtime). Beware though of codes that are sharing ressources since the data-transfer between cores should be managed by the programmer(You!).
 
+<img src="images/multi_processing_.png">
+
+> Notice the core PIDs changing and the gain in run-time.
+
 - **Multi-threading**: Similarly to Multi-processing, we often hear the words "Quad-core, 8 Threads" when talking about CPUs. Threads are virtual Cores(CPUs) that live on a physical Core(CPU). They're used also to speed up processes but in Python, multi-threading doesn't exactly run tasks simultaneously, instead it sequentially jumps between tasks without waiting for one to finish and end up saving idle times. Since multi-threading runs on the same core, the problems of data-transfer between cores that arises in the multiprocessing case isn't present.
+
+<img src="images/multi_threading_.png">
+
+> Notice the same core PID for all examples with the gain in run-time.
 
 ---
 
